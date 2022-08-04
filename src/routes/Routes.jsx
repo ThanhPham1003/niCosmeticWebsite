@@ -6,8 +6,9 @@ import Home from '../pages/Home'
 import Catalog from '../pages/Catalog'
 import Cart from '../pages/Cart'
 import Product from '../pages/Product'
-import Comestic from '../pages/Comestic'
-import ComesticsCatalog from '../pages/ComesticsCatalog'
+
+import InfoModal from '../components/InfoModal'
+import Host from '../pages/Host'
 
 const Routes = () => {
     return (
@@ -16,8 +17,8 @@ const Routes = () => {
             <Route path='/catalog/:slug' exact component={Product}/>
             <Route path='/catalog' exact component={Catalog}/>
             <Route path='/cart'  exact component={Cart}/>
-            <Route path='/comestics'  exact component={ComesticsCatalog}/>
-            <Route path='/comestics/:slug' exact component={Comestic}/>
+            <Route path='/confirm' exact component={InfoModal}/>
+            <Route path='/host' exact component={Host} />
         </Switch>
     )
 }

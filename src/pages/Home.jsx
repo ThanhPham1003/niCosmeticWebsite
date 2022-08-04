@@ -21,13 +21,13 @@ const Home = () => {
             <HeroSlider
                 data={heroSliderData}
                 control={true}
-                auto={false}
+                auto={true}
                 timeOut={5000}
             />
             {/* end hero slider */}
 
             {/* policy section */}
-            <Section>
+            {/* <Section>
                 <SectionBody>
                     <Grid
                         col={4}
@@ -46,7 +46,7 @@ const Home = () => {
                         }
                     </Grid>
                 </SectionBody>
-            </Section>
+            </Section> */}
             {/* end policy section */}
 
             {/* best selling section */}
@@ -108,13 +108,13 @@ const Home = () => {
             {/* end new arrival section */}
             
             {/* banner */}
-            <Section>
+            {/* <Section>
                 <SectionBody>
                     <Link to="/catalog">
                         <img src={banner} alt="" />
                     </Link>
                 </SectionBody>
-            </Section>
+            </Section> */}
             {/* end banner */}
 
             {/* popular product section */}

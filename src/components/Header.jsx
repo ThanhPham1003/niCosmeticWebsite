@@ -9,23 +9,19 @@ const mainNav = [
         path: "/"
     },
     {
-        display: "Sale",
-        path: "/sale"
-    },
-    {
-        display: "Quần Áo",
+        display: "Sản Phẩm",
         path: "/catalog"
     },
+    // {
+    //     display: "Mỹ Phẩm",
+    //     path: "/comestics"
+    // },
+    // {
+    //     display: "Khác",
+    //     path: "/orders"
+    // },
     {
-        display: "Mỹ Phẩm",
-        path: "/comestics"
-    },
-    {
-        display: "Khác",
-        path: "/orders"
-    },
-    {
-        display: "Liên hệ",
+        display: "Chính sách CTV - Sỉ",
         path: "/contact"
     }
 ]

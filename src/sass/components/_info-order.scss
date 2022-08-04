@@ -1,0 +1,68 @@
+.info-orders{
+  @include flex(flex-start, flex-start);
+  &__list{
+    box-shadow: $box-shadow;
+    position: sticky;
+    top: calc(#{$header-shrink-height} + 20px);
+    width: 82%;
+    border-radius: 10px;
+    & > * {
+      margin-bottom: 20px;
+    }
+  }
+  &__selector{
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 30px;
+    box-shadow: $box-shadow;
+    position: sticky;
+    top: calc(#{$header-shrink-height} + 20px);
+    &__txt{
+      margin-bottom: 10px;
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+    &__txt:hover{
+      color: red;
+    }
+  }
+  &__item{
+    @include flex(flex-start, flex-start);
+    &__txt{
+      &__date{
+        width: 7%;
+        padding: 20px;
+        font-weight: 900;
+        font-size: 1rem;
+      }
+      &__order-name{
+        width: 22%;
+        padding: 20px;
+        font-weight: 900;
+        font-size: 1rem;
+
+      }
+      &__name{
+        width: 20%;
+        padding: 20px;
+        font-weight: 900;
+        font-size: 1rem;
+
+      }
+      &__normal{
+        width: 15%;
+        padding: 20px;
+        font-weight: 900;
+        font-size: 1rem;
+      }
+    }
+    &__btn{
+      & > * {
+        margin-bottom: 10px;
+        margin-top: 20px;
+      }
+    }
+    
+  }
+ 
+}

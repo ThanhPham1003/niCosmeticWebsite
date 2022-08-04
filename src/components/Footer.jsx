@@ -29,31 +29,31 @@ const footerAboutLinks = [
     }
 ]
 
-const footerCustomerLinks = [
-    {
-        display: "Chính sách đổi trả",
-        path: "/about"
-    },
-    {
-        display: "Chính sách bảo hành",
-        path: "/about"
-    },
-    {
-        display: "Chính sách hoàn tiền",
-        path: "/about"
-    }
-]
+// const footerCustomerLinks = [
+//     {
+//         display: "Chính sách đổi trả",
+//         path: "/about"
+//     },
+//     {
+//         display: "Chính sách bảo hành",
+//         path: "/about"
+//     },
+//     {
+//         display: "Chính sách hoàn tiền",
+//         path: "/about"
+//     }
+// ]
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
                 <Grid
-                    col={4}
+                    col={2}
                     mdCol={2}
                     smCol={1}
                     gap={10}
                 >
-                    <div>
+                    {/* <div>
                         <div className="footer__title">
                             Tổng đài hỗ trợ
                         </div>
@@ -68,10 +68,10 @@ const Footer = () => {
                                 Góp ý, khiếu nại <strong>0123456789</strong>
                             </p>
                         </div>
-                    </div>
+                    </div> */}
                     <div>
                         <div className="footer__title">
-                            Về Yolo
+                            Về Chúng Tôi
                         </div>
                         <div className="footer__content">
                             {
@@ -85,7 +85,7 @@ const Footer = () => {
                             }
                         </div>
                     </div>
-                    <div>
+                    {/* <div>
                         <div className="footer__title">
                             Chăm sóc khách hàng
                         </div>
@@ -100,7 +100,7 @@ const Footer = () => {
                                 ))
                             }
                         </div>
-                    </div>
+                    </div> */}
                     <div className="footer__about">
                         <p>
                             <Link to="/">

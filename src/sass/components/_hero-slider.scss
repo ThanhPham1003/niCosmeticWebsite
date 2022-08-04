@@ -49,7 +49,7 @@
 
             &__title,
             &__description {
-                margin-bottom: 60px;
+                margin-bottom: 50px;
 
                 @include tablet {
                     margin-bottom: 15px;
@@ -118,7 +118,7 @@
             }
 
             img {
-                height: 90vh;
+                height: 85vh;
                 position: absolute;
                 bottom: 0;
                 right: 0;

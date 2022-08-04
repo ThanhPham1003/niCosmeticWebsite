@@ -16,7 +16,7 @@ const ProductCard = props => {
     const dispatch = useDispatch()
     return (
         <div className="product-card">
-            <Link to={`/${props.path}/${props.slug}`}>
+            <Link to={`/catalog/${props.slug}`}>
                 <div className="product-card__image">
                     <img src={props.img01} alt="" />
                     <img src={props.img02} alt="" />

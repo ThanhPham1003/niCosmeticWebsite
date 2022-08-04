@@ -10,6 +10,7 @@ import { remove } from '../redux/product-modal/productModalSlice'
 
 import productData from '../assets/fake-data/products'
 
+
 const ProductViewModal = () => {
 
     const productSlug = useSelector((state) => state.productModal.value)
@@ -18,7 +19,7 @@ const ProductViewModal = () => {
     const [product, setProduct] = useState(undefined)
 
     useEffect(() => {
-        setProduct(productData.getProductBySlug(productSlug))
+        let temp = productData.getProductBySlug(productSlug);
     }, [productSlug]);
 
     return (

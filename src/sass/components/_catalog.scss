@@ -29,7 +29,19 @@
         &.active {
             transform: translateX(0);
         }
-
+        &__searchbar{
+            margin-bottom: 10px;
+            &__input{
+                border-radius: 10px;
+                height: 30px;
+                min-width: 65%;
+                padding: 10px;
+            }
+            &__input:focus{
+                width: 80%;
+            }
+        }
+        
         &__widget {
             margin-bottom: 2rem;
 

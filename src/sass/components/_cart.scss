@@ -67,6 +67,7 @@
 
             img {
                 height: 150px;
+                width: 100px;
             }
         }
 
@@ -85,7 +86,7 @@
 
             &__name {
                 width: 40%;
-
+                font-weight: 800;
                 @include mobile {
                     width: 100%;
                 }
