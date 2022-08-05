@@ -1,19 +1,19 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, {useContext} from 'react'
 import { FirebaseContext } from '../context/FirebaseContext'
 import Button from '../components/Button'
 const ListPendingOrders = (props) => {
-  const [item, setItem] = useState(props.item)
+  const item = props.item
   const firebase = useContext(FirebaseContext);
   const date = new Date(item.date*1000)
   const setCompleted = async () => {
     console.log("55555")
-    const send = await firebase.createCompletedOrder(item.date,item.name, item.address,item.order, item.payment, item.phone, item.price )
-    const dlt = await firebase.deleteOrder(item.id);
+    await firebase.createCompletedOrder(item.date,item.name, item.address,item.order, item.payment, item.phone, item.price )
+    await firebase.deleteOrder(item.id);
     props.setIsUpdated(true);
 
   }
   const Delete = async () => {
-    const dlt = await firebase.deleteOrder(item.id);
+    await firebase.deleteOrder(item.id);
     props.setIsUpdated(true);
   }
   return (

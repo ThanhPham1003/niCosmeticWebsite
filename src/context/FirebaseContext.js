@@ -1,8 +1,8 @@
-import React, { useContext, useState, createContext } from "react";
+import React, {createContext } from "react";
 import firebase from "firebase/compat";
 import 'firebase/auth';
 import config from '../config/firebase-config'
-import {collection, getDocs, addDoc, doc, deleteDoc  } from "@firebase/firestore"
+import {collection, getDocs, addDoc, doc, deleteDoc, query, orderBy  } from "@firebase/firestore"
 
 const FirebaseContext = createContext()
 
@@ -69,7 +69,7 @@ const Firebase = {
   },
   getPendingOrders: async () => {
     try{
-      const orders = await getDocs(collection(db,"pending-orders"))
+      const orders = await getDocs(query(collection(db,"pending-orders"), orderBy("date","asc")))
       return orders.docs.map((doc) => ({ ...doc.data(), id: doc.id}))
     }catch(error){
       console.log("Error in get info from Pending Orders: ", error);
@@ -77,7 +77,7 @@ const Firebase = {
   },
   getCompletedOrders: async () => {
     try{
-      const orders = await getDocs(collection(db,"completed-orders"))
+      const orders = await getDocs(query(collection(db,"completed-orders"), orderBy("date","desc")))
       return orders.docs.map((doc) => ({ ...doc.data(), id: doc.id}))
     }catch(error){
       console.log("Error in get info from Completed Orders: ", error);
@@ -98,7 +98,7 @@ const Firebase = {
       return "succesfully"
     }
     catch(error){
-      console.log("Error in send info to Completed Orders: ", error);
+      return "Error in send info to Completed Orders: " + error;
     }
   },
   deleteOrder: async (id) => {

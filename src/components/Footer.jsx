@@ -71,9 +71,39 @@ const Footer = () => {
                     </div> */}
                     <div>
                         <div className="footer__title">
-                            Về Chúng Tôi
+                        🌱 Chuyên mỹ phẩm  - Thực phẩm chức năng
                         </div>
-                        <div className="footer__content">
+                        <div className="footer__title">
+                        👉 Cam kết chính hãng 1OO%, Fake hoàn 2OO% giá trị sản phẩm ❌
+                        </div>
+                        <div className="footer__title">
+                        🏡 Địa chỉ: đường DD6 , Tân Hưng Thuận Q12
+                        </div>
+                        <div className="footer__title">
+                        👉 Instagram: @thuthao.order
+                        </div>
+                        <div className="footer__title">
+                        👉 Tiktokshop: 
+                            <a className="footer__link" href='https://www.tiktok.com/@nicosmetic_skincare'>
+                            www.tiktok.com/@nicosmetic_skincare
+                            </a> 
+                        </div>
+                        
+                        <div className="footer__title">
+                        👉 Group săn sale hằng ngày cho khách lẻ: 
+                        
+                            <a className="footer__link" href='https://www.facebook.com/groups/301457590921228/'>
+                            https://www.facebook.com/groups/301457590921228/
+                            </a>
+                        </div>
+                        
+                        <div className="footer__title">
+                        ☎️  Nhóm sỉ , ctv:                         
+                        <a className="footer__link" href='https://zalo.me/g/dknqgh163'>https://zalo.me/g/dknqgh163</a>
+                        </div>
+
+                        
+                        {/* <div className="footer__content">
                             {
                                 footerAboutLinks.map((item, index) => (
                                     <p key={index}>
@@ -83,7 +113,7 @@ const Footer = () => {
                                     </p>
                                 ))
                             }
-                        </div>
+                        </div> */}
                     </div>
                     {/* <div>
                         <div className="footer__title">

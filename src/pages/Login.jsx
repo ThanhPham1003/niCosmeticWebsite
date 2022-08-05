@@ -1,16 +1,14 @@
 import React from 'react'
-import { useState, useEffect, useContext } from 'react'
+import { useState, useContext } from 'react'
 import { FirebaseContext } from '../context/FirebaseContext'
 
 import Helmet from '../components/Helmet'
 import FormInput from '../components/FormInput'
 import Button from '../components/Button'
-import Admin from './Admin'
-import Host from './Host'
+
 
 const Login = ({setAuth}) => {
   const firebase = useContext(FirebaseContext);
-  const [token, setToken] = useState('');
   const [values, setValues] = useState({
     username: "",
     password: "",
@@ -45,7 +43,6 @@ const Login = ({setAuth}) => {
     const tk = await firebase.signIn(values.username, values.password);
     if (tk.isSuccessful){
       setAuth(true);
-      setToken(tk.message);
     }
     else {
       alert(tk.message);

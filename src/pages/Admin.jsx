@@ -1,9 +1,8 @@
-import axios from 'axios';
+
 import React from 'react'
 import { useEffect, useState, useContext } from 'react'
 import { FirebaseContext } from '../context/FirebaseContext'
 import HeaderPendingOrders from '../components/HeaderPendingOrders';
-import API from '../config/environmentVariables'
 import ListPendingOrders from '../components/ListPendingOrders';
 import ListCompletedOrders from '../components/ListCompletedOrders'
 
@@ -24,7 +23,6 @@ const Admin = () => {
 
   useEffect(() =>{
     fetchData();
-    console.log("333333", isPending)
   }, [isUpdated])
 
   return (

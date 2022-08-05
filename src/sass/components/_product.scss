@@ -20,7 +20,7 @@
 
         &__list {
             width: 20%;
-
+            margin-top: 40px;
             &__item {
                 cursor: pointer;
             }
@@ -180,6 +180,7 @@
         line-height: 1.875rem;
         text-align: justify;
     }
+
 
     &__toggle {
         position: absolute;

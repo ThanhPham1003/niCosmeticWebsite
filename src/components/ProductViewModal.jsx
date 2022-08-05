@@ -19,7 +19,7 @@ const ProductViewModal = () => {
     const [product, setProduct] = useState(undefined)
 
     useEffect(() => {
-        let temp = productData.getProductBySlug(productSlug);
+        setProduct(productData.getProductBySlug(productSlug));
     }, [productSlug]);
 
     return (

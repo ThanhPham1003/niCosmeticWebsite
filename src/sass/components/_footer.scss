@@ -16,8 +16,16 @@
 
     &__title {
         text-transform: uppercase;
-        margin-bottom: 2rem;
+        margin-bottom: 5px;
+        margin-right: 5px;
         font-weight: 600;
+    }
+    &__link{
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        margin-left: 5px;
+        font-weight: 600;
+        color: blue;
     }
 
     &__content {

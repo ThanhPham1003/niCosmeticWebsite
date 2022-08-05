@@ -6,6 +6,7 @@ import Button from '../components/Button'
 import { useDispatch } from 'react-redux'
 import { removeItem } from '../redux/shopping-cart/cartItemsSlide'
 import { FirebaseContext } from '../context/FirebaseContext'
+import numberWithCommas from '../utils/numberWithCommas'
 
 const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) => {
   const firebase = useContext(FirebaseContext);
@@ -14,7 +15,7 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
     address: "",
     phone: "",
   });
-  const newPrice = Math.ceil(price * 1.015)
+  const newPrice = Math.ceil(price * 1.01)
   const [payment, setPayment] = useState('cod');
   const [isCk, setIsCk] = useState(false);
   //const [isDoneDeal, setIsDoneDeal] = useState(false);
@@ -60,13 +61,20 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
   const sendInfo = async () => {
     if(!values.name || !values.address || !values.phone) alert("Vui lòng điền đầy đủ thông tin");
     else{
+      let pr = 0;
+      if(!isCk) pr = newPrice;
+      else pr = price
+      try{
       const timestamp = Math.floor(Date.now() / 1000)
-      const send = await firebase.createOrder(timestamp, values.name, values.address, title, payment, values.phone, price)
+      await firebase.createOrder(timestamp, values.name, values.address, title, payment, values.phone, pr)
       setOpenModal(false);
       setIsDoneDeal(true);
       cartProducts.map((item) => (
         dispatch(removeItem(item))
       ))
+      }catch(error){
+        console.log(error)
+      }
     }
 
     // alert("Cảm ơn bạn đã đặt hàng. Chúng mình sẽ xử lý và gửi hàng trong thời gian sớm nhất. Bạn có thể tiếp tục mua hàng tại website của chúng mình.")  
@@ -103,11 +111,12 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
             <option value="cod">Thanh toán khi nhận hàng</option>
             <option value="ck">Chuyển khoản</option>   
           </select>
-          {!isCk && <div className='order__content'>Hiện tại Tổng Cục Thuế có quyết định truy thu sao kê tài khoản liên kết với tài khoản COD GHTK. Em xin phép thu thêm 1,5% trên tổng hoá đơn theo qui định hiện hành nếu khách chọn dịch vụ thanh toán khi nhận hàng (COD).</div>} 
+          {!isCk && <div className='order__content'>Hiện tại Tổng Cục Thuế có quyết định truy thu sao kê tài khoản liên kết với tài khoản COD GHTK. Em xin phép thu thêm 1% trên tổng hoá đơn theo qui định hiện hành nếu khách chọn dịch vụ thanh toán khi nhận hàng (COD).</div>} 
           {!isCk && <div className='order__content'>Đối với chuyển khoản trước khi nhận hàng bên em không thu thêm thuế.</div>}
-          {!isCk && <div className='order__content__stk'>Nên giá sản phẩm sẽ là {newPrice}</div>}
-          {isCk && <div className='order__content'>Vui lòng chuyển khoản theo stk:</div>}
-          {isCk && <div className='order__content__stk'>  123456 Thu Thao MB Bank  </div>}
+          {!isCk && <div className='order__content__stk'>Nên giá sản phẩm sẽ là {numberWithCommas(newPrice)}</div>}
+          {isCk && <div className='order__content'>Vui lòng chuyển khoản theo STK: </div>}
+          {isCk && <div className='order__content__stk'> 999191191999 - Đào Thu Thảo</div>}
+          {isCk && <div className='order__content__stk'> ❤️MB bank ( ngân hàng Quân Đội ) </div>}
           {isCk && <div className='order__content'>Theo cú phápp: </div>}
           {isCk && <div className='order__content__stk'>{values.name}-{values.phone} </div>}
           <div className='order__button'>

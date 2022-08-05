@@ -33,7 +33,7 @@ const Cart = () => {
     //     console.log("hihihihi", result.toString());
     // },[])
     const textInfo= () => {
-        if(totalProducts == 0) alert("Vui lòng chọn sản phẩm vào giỏ hàng")
+        if(totalProducts === 0) alert("Vui lòng chọn sản phẩm vào giỏ hàng")
         else setModalOpen(true)
     }
 
