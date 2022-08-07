@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  smart-farm-web:
+    image: chithanh1999/ni-cosmetic
+    ports:
+      - "3015:80"
+    restart: always
