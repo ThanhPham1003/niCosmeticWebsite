@@ -15,14 +15,14 @@ const HeaderPendingOrders = () => {
       <div className="info-orders__item__txt__name">
         Địa Chỉ
       </div>
-      <div className="info-orders__item__txt__normal">
+      {/* <div className="info-orders__item__txt__normal">
         Thanh Toán
-      </div>
+      </div> */}
       <div className="info-orders__item__txt__order-name">
         Tên Mặt Hàng
       </div>
       <div className="info-orders__item__txt__normal">
-        Tổng tiền (chưa thuế + ship)
+        Tổng tiền
       </div>
       <div className="info-orders__item__txt__normal">
         Tình Trạng

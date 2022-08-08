@@ -1,6 +1,7 @@
 import React, { useContext} from 'react'
 import Button from '../components/Button'
 import { FirebaseContext } from '../context/FirebaseContext'
+import numberWithCommas from '../utils/numberWithCommas'
 const ListCompletedOrders = (props) => {
   const item = props.item
   const firebase = useContext(FirebaseContext);
@@ -24,14 +25,14 @@ const ListCompletedOrders = (props) => {
       <div className="info-orders__item__txt__name">
         {item.address ?? ""}
       </div>
-      <div className="info-orders__item__txt__normal">
+      {/* <div className="info-orders__item__txt__normal">
         {item.payment ?? ""}
-      </div>
+      </div> */}
       <div className="info-orders__item__txt__order-name">
         {item.order ?? ""}
       </div>
       <div className="info-orders__item__txt__normal">
-        {item.price ?? ""}
+        {numberWithCommas(item.price) ?? ""}
       </div>
       <div className="info-orders__item__btn">
         <Button size="sm" onClick={() => Delete()}>

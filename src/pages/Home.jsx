@@ -5,11 +5,11 @@ import HeroSlider from '../components/HeroSlider'
 import Section, { SectionTitle, SectionBody } from '../components/Section'
 import Grid from '../components/Grid'
 import ProductCard from '../components/ProductCard'
-
+import PolicyCard from '../components/PolicyCard'
 import heroSliderData from '../assets/fake-data/hero-slider'
 
 import productData from '../assets/fake-data/products'
-
+import policy  from '../assets/fake-data/policy'
 
 
 const Home = () => {
@@ -25,26 +25,26 @@ const Home = () => {
             {/* end hero slider */}
 
             {/* policy section */}
-            {/* <Section>
+            <Section>
                 <SectionBody>
                     <Grid
-                        col={4}
+                        col={2}
                         mdCol={2}
                         smCol={1}
                         gap={20}
                     >
                         {
-                            policy.map((item, index) => <Link key={index} to="/policy">
+                            policy.map((item, index) => <div key={index} to="/policy">
                                 <PolicyCard
                                     name={item.name}
                                     description={item.description}
                                     icon={item.icon}
                                 />
-                            </Link>)
+                            </div>)
                         }
                     </Grid>
                 </SectionBody>
-            </Section> */}
+            </Section>
             {/* end policy section */}
 
             {/* best selling section */}

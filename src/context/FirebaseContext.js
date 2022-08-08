@@ -83,18 +83,18 @@ const Firebase = {
       console.log("Error in get info from Completed Orders: ", error);
     }
   },
-  createOrder: async (date, name, address,order, payment, phone, price ) => {
+  createOrder: async (date, name, address,order,  phone, price ) => {
     try{
-      await addDoc(collection(db, "pending-orders"), {date: date, name: name, address: address, order: order, payment: payment, phone: phone, price: price});
+      await addDoc(collection(db, "pending-orders"), {date: date, name: name, address: address, order: order, phone: phone, price: price});
       return "succesfully"
     }
     catch(error){
       console.log("Error in send info to Pending Orders: ", error);
     }
   },
-  createCompletedOrder: async (date, name, address,order, payment, phone, price ) => {
+  createCompletedOrder: async (date, name, address,order, phone, price ) => {
     try{
-      await addDoc(collection(db, "completed-orders"), {date: date, name: name, address: address, order: order, payment: payment, phone: phone, price: price});
+      await addDoc(collection(db, "completed-orders"), {date: date, name: name, address: address, order: order,  phone: phone, price: price});
       return "succesfully"
     }
     catch(error){

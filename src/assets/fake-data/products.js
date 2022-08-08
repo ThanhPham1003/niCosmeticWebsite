@@ -308,6 +308,9 @@ const duongmoi_mediheal2 = require('../images/products/duongmoi-mediheal2.png').
 const ckone1 = require('../images/products/ckone1.png').default
 const ckone2 = require('../images/products/ckone2.png').default
 
+const dior_5ml1 = require('../images/products/dior-5ml1.png').default
+const dior_5ml2 = require('../images/products/dior-5ml2.png').default
+
 const set_hermes1 = require('../images/products/set-hermes1.png').default
 const set_hermes2 = require('../images/products/set-hermes2.png').default
 
@@ -437,6 +440,9 @@ const srm_cerave8 = require('../images/products/srm-cerave8.png').default
 
 const srm_svr1 = require('../images/products/srm-svr1.png').default
 const srm_svr2 = require('../images/products/srm-svr2.png').default
+
+const suatam_itn1 = require('../images/products/suatam-itn1.png').default
+const suatam_itn2 = require('../images/products/suatam-itn2.png').default
 
 const suatam_weilaiya1 = require('../images/products/suatam-weilaiya1.png').default
 const suatam_weilaiya2 = require('../images/products/suatam-weilaiya2.png').default
@@ -1711,6 +1717,16 @@ const products = [
         description: "Trẻ trung, tươi mát, đầy sự tươi mới và năng động, CK one còn được tạo ra để dùng cho cả nam và nữ. Sở hữu nhóm hương mát lạnh như Trái thơm, Chanh vàng, Cam bergamot và Hương lục ngay note đầu tiên, CK khiến khứu giác trở nên thư giãn và sạch tới bất ngờ. Midnote của CK one là một chợ hoa đêm, với Hoa tím, Hoa nhài hay Hoa linh lan thung lũng, một sự cuốn hút và táo bạo của nhà CK khi đặt trái cây và hương hoa vào cùng với nhau. Tạo nên cảm giác giải nhiệt nhưng đủ gây sự chú ý. Kết thúc bằng hương Gỗ tuyết tùng và Gỗ đàn hương, CK trọn vẹn mùi hương trên da, trên quần áo bạn và sẵn sàng giúp bạn tự tin cho một ngày mới, hãy là số 1, đừng là số 2 với CK one."
     },
     {
+        title: "Nước hoa Dior mini 5ml",
+        price: '220000',
+        image01: dior_5ml1,
+        image02: dior_5ml2,
+        categorySlug: "nuoc-hoa",
+        slug:"nuoc-hoa-dior-5ml",
+        type: "binh-on",
+        description: "Miss Dior Blooming Bouquet 5ml truyền đến cảm hứng về một tình yêu đặc biệt và vui tươi. Hương thơm đại diện cho sự tự do và quyến rũ, đặc trưng bởi một sự duyên dáng và khả năng làm say đắm lòng người."
+    },
+    {
         title: "Set Hermes",
         price: '1100000',
         image01: set_hermes1,
@@ -2157,6 +2173,16 @@ const products = [
         description: "Gel Rửa Mặt SVR Sebiaclear Gel Moussant là sản phẩm sữa rửa mặt dành cho làn da dầu mụn đến từ thương hiệu dược mỹ phẩm SVR, với công thức không chứa xà phòng giúp làm sạch, nhẹ nhàng làm thông thoáng làn da. Khả năng tạo bọt mịn giúp loại trừ các chất bẩn và lượng bã nhờn dư thừa mà không làm khô da. Có thể rửa sạch dễ dàng, mang lại một làn da sạch, tươi mát và khô thoáng."
     },
     //sua tam
+    {
+        title: "Sữa tắm Into the night",
+        price: '195000',
+        image01: suatam_itn1,
+        image02: suatam_itn2,
+        categorySlug: "cham-soc-da",
+        slug:"suatam-into-the-night",
+        type: "binh-on",
+        description: "Gel tắm Bath & Body Works tạo bọt nhẹ nhàng giúp làm sạch và lưu lại trên da mùi hương ngây ngất suốt ngày dài.Với công thức kết hợp vitamin E cùng bơ hạt mỡ giúp nuôi dưỡng, cấp ẩm cho làn da thêm mềm mại, mịn màng. Into The Night là sự kết hợp đầy hoản hảo của quả mọng đen, hoa nhài nửa đêm và hổ phách. Mang đến một mùi hương vượt thời gian, gợi lên nét nữ tính, quyến rũ, đầy sự tự tin và rạng ngời của phái đẹp."
+    },
     {
         title: "Sữa tắm Weilaiya",
         price: '285000',

@@ -5,6 +5,7 @@ import { FirebaseContext } from '../context/FirebaseContext'
 import HeaderPendingOrders from '../components/HeaderPendingOrders';
 import ListPendingOrders from '../components/ListPendingOrders';
 import ListCompletedOrders from '../components/ListCompletedOrders'
+import Helmet from '../components/Helmet'
 
 const Admin = () => {
   const [orders, setOrders] = useState([]);
@@ -26,6 +27,7 @@ const Admin = () => {
   }, [isUpdated])
 
   return (
+    <Helmet title="Quản lý">
     <div className='info-orders'>
       <div className='info-orders__selector'>
         <div className='info-orders__selector__txt' onClick={() => setIsPending(true)}>
@@ -60,7 +62,7 @@ const Admin = () => {
 
       </div>
     </div>
-    
+    </Helmet>
   )
 }
 

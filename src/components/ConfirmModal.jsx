@@ -5,9 +5,6 @@ const ConfirmModal = ({setIsDoneDeal, title}) => {
     setIsDoneDeal(false);
    window.location.replace("http://localhost:3000");
   }
-  useEffect(()=> {
-   console.log("333333", title) 
-  })
   return (
     <div className="info-modal">
       <div className='info-modal__content'>

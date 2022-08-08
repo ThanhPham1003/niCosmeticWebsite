@@ -42,7 +42,7 @@ const Cart = () => {
         setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
         setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
         let title = cartProducts.map(item => {
-            return item.slug + " x " + item.quantity;
+            return item.product.title + " x " + item.quantity;
         })
         setTitle(title.toString());
     }, [cartItems])
