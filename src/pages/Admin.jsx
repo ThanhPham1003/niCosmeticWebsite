@@ -19,12 +19,12 @@ const Admin = () => {
 
     const data2 = await firebase.getCompletedOrders();
     setComplated(data2)
-    if(isUpdated) setIsUpdated(false);
+    
   }
 
   useEffect(() =>{
     fetchData();
-  }, [isUpdated])
+  })
 
   return (
     <Helmet title="Quản lý">
@@ -44,7 +44,7 @@ const Admin = () => {
             
               return (
             <>
-              <ListPendingOrders setIsUpdated={setIsUpdated} item={item} key1={index}/> 
+              <ListPendingOrders isUpdated={isUpdated} setIsUpdated={setIsUpdated} item={item} key1={index}/> 
             </>
             )
             })
@@ -53,7 +53,7 @@ const Admin = () => {
            
               return (
              <>
-              <ListCompletedOrders setIsUpdated={setIsUpdated} item={item} key2={index}/> 
+              <ListCompletedOrders isUpdated={isUpdated} setIsUpdated={setIsUpdated} item={item} key2={index}/> 
              </>
              )
             })

@@ -33,18 +33,22 @@ const Cart = () => {
     //     console.log("hihihihi", result.toString());
     // },[])
     const textInfo= () => {
+        
         if(totalProducts === 0) alert("Vui lòng chọn sản phẩm vào giỏ hàng")
-        else setModalOpen(true)
+        else {
+            let title = cartProducts.map(item => {
+                return item.product.title + " x " + item.quantity;
+            })
+            setTitle(title.toString());
+            setModalOpen(true)
+        }
     }
 
     useEffect(() => {
         setCartProducts(productData.getCartItemsInfo(cartItems))
         setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
         setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
-        let title = cartProducts.map(item => {
-            return item.product.title + " x " + item.quantity;
-        })
-        setTitle(title.toString());
+
     }, [cartItems])
     return (
         <Helmet title="Giỏ hàng">
@@ -64,7 +68,7 @@ const Cart = () => {
                             <Button size="block" onClick={() => {
           textInfo();
         }}>
-                                Đặt hàng
+                                Thanh toán
                             </Button>
                         
                         <Link to="/catalog">

@@ -55,6 +55,7 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
     },
   ]
   const onChange = (e) => {
+    console.log("444444", e.target.name, e.target.value)
     setValues({ ...values, [e.target.name]: e.target.value});
   }
 
@@ -83,14 +84,13 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
 
   }
   useEffect(() =>{
-
     let temp = 0;
     if(price > 299000){
      temp = (price > 998000) ? (price - 50000) : (price - 20000);
      setNewPrice(temp)
      setIsPromotion(true)
     }
-  })
+  },[price])
 
 
   return (
@@ -98,12 +98,12 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
       <div className="order">
         <div className='order__text'>THÔNG TIN KHÁCH HÀNG</div>
           <form>
-            {inputs.map((input) =>(
+            {inputs.map((input, index) =>(
               <FormInput 
-              key={input.id}
+              key={index}
               {...input}
               value={values[input.name]}
-              onChange={onChange}
+              onChange={(e) => onChange(e)}
               />
             ))}
           </form>

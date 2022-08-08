@@ -90,27 +90,16 @@ const Catalog = () => {
                     return itemData.indexOf(textData) > -1;
                   });
             }
-            // if (filter.category.length > 0) {
-            //     temp = temp.filter(e => filter.category.includes(e.categorySlug))
-            // }
             if (filter.cosmeticsCategory.length > 0) {
                 temp = temp.filter(e => filter.cosmeticsCategory.includes(e.categorySlug))
             }
             if (filter.types.length > 0) {
                 temp = temp.filter(e => filter.types.includes(e.type))
             }
-
-            if(info){
-                temp = temp.filter((item) => {
-                    const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
-                    const textData = info.toUpperCase();
-                    return itemData.indexOf(textData) > -1;
-                  });
-            }
             setProducts(temp)
             setSearchingProduct(temp)
         },
-        [filter, productList],
+        [filter, productList, info],
     )
 
     useEffect(() => {

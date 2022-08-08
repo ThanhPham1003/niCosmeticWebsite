@@ -34,6 +34,7 @@ const Firebase = {
           case "auth/wrong-password":
             msg = err.message;
             break;
+          default: msg= "error with you account" ;
         }
         return null;
       });

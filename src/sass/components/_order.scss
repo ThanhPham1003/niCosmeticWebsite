@@ -2,10 +2,14 @@
   &__info{
     min-width: 200px;
     &__input{
+      font-size: 16px;
       margin:10px 0px;
       padding: 10px;
       border-radius: 10px;
       width: 220px;
+      -webkit-user-select:text;
+      -moz-user-select: text; 
+      -ms-user-select: text;
     }
 
     &__label{
