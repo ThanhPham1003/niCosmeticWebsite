@@ -30,20 +30,20 @@ const Catalog = () => {
 
     const [filter, setFilter] = useState(initFilter)
 
-    const searchFilter = (text) => {
-        if(text) {
-            const newData = searchingProduct.filter((item) => {
-            const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
-            const textData = text.toUpperCase();
-            return itemData.indexOf(textData) > -1;
-          });
-          setProducts(newData);
-          setInfo(text);
-        }else{
-          setProducts(searchingProduct);
-          setInfo(text);
-        }
-      }
+    // const searchFilter = (text) => {
+    //     if(text) {
+    //         const newData = searchingProduct.filter((item) => {
+    //         const itemData = item.title ? item.title.toUpperCase() : ''.toUpperCase();
+    //         const textData = text.toUpperCase();
+    //         return itemData.indexOf(textData) > -1;
+    //       });
+    //       setProducts(newData);
+    //       setInfo(text);
+    //     }else{
+    //       setProducts(searchingProduct);
+    //       setInfo(text);
+    //     }
+    //   }
 
     const filterSelect = (type, checked, item) => {
         if (checked) {
@@ -123,7 +123,7 @@ const Catalog = () => {
                             type="text" 
                             placeholder='Tìm kiếm sản phẩm...' 
                             value={info}
-                            onChange={(e) => searchFilter(e.target.value)}
+                            onChange={(e) => setInfo(e.target.value)}
                         />
                     </div>
                     <div className="catalog__filter__widget">
