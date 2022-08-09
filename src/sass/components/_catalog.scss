@@ -7,7 +7,8 @@
 
     &__filter {
         width: 20%;
-
+        position: sticky;
+        top: calc(#{$header-shrink-height} + 20px);
         @include tablet {
             width: max-content;
             height: 100vh;

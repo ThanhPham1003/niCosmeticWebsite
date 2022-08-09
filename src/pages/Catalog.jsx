@@ -17,7 +17,6 @@ const Catalog = () => {
     const initFilter = {
         cosmeticsCategory: [],
         types: []
-
     }
 
     const productList = productData.getAllProducts()
@@ -25,8 +24,6 @@ const Catalog = () => {
     const [products, setProducts] = useState(productList)
 
     const [info, setInfo] = useState('');
-
-    const [searchingProduct, setSearchingProduct] = useState(productList)
 
     const [filter, setFilter] = useState(initFilter)
 
@@ -78,7 +75,10 @@ const Catalog = () => {
         }
     }
 
-    const clearFilter = () => setFilter(initFilter)
+    const clearFilter = () => {
+        setInfo('')
+        setFilter(initFilter)
+    }
 
     const updateProducts = useCallback(
         () => {
@@ -97,7 +97,6 @@ const Catalog = () => {
                 temp = temp.filter(e => filter.types.includes(e.type))
             }
             setProducts(temp)
-            setSearchingProduct(temp)
         },
         [filter, productList, info],
     )
