@@ -10,12 +10,12 @@ const ListPendingOrders = (props) => {
     console.log("55555")
     await firebase.createCompletedOrder(item.date,item.name, item.address,item.order, item.phone, item.price )
     await firebase.deleteOrder(item.id);
-    props.setIsUpdated(!props.isUpdated);
+    props.setIsUpdated(true);
 
   }
   const Delete = async () => {
     await firebase.deleteOrder(item.id);
-    props.setIsUpdated(!props.isUpdated);
+    props.setIsUpdated(true);
   }
   return (
     <div className='info-orders__item'>

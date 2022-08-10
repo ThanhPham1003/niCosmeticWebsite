@@ -23,8 +23,9 @@ const Admin = () => {
   }
 
   useEffect(() =>{
+    setIsUpdated(false);
     fetchData();
-  })
+  },[isUpdated])
 
   return (
     <Helmet title="Quản lý">

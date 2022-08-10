@@ -9,7 +9,7 @@ const ListCompletedOrders = (props) => {
 
   const Delete = async () => {
     await firebase.deleteCompletedOrder(item.id);
-    props.setIsUpdated(!props.isUpdated);
+    props.setIsUpdated(true);
   }
   return (
     <div className='info-orders__item'>

@@ -7,7 +7,7 @@ const policy = [
     {
         name: "Khuyễn mãi 50k",
         description: "Khuyễn mãi 50k cho đơn hàng từ 999k",
-        icon: "bx bx-donate-heart"
+        icon: "bx bxl-tiktok"
     },
 ]
 
