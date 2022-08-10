@@ -21,8 +21,8 @@ const mainNav = [
     //     path: "/orders"
     // },
     {
-        display: "Chính sách CTV - Sỉ",
-        path: "/contact"
+        display: "Liên hệ",
+        path: "/info"
     }
 ]
 

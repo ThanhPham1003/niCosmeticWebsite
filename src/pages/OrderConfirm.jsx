@@ -55,7 +55,6 @@ const OrderConfirm = ({price, title,setOpenModal, setIsDoneDeal ,cartProducts}) 
     },
   ]
   const onChange = (e) => {
-    console.log("444444", e.target.name, e.target.value)
     setValues({ ...values, [e.target.name]: e.target.value});
   }
 

@@ -9,6 +9,7 @@ import Product from '../pages/Product'
 
 import InfoModal from '../components/InfoModal'
 import Host from '../pages/Host'
+import Beacons from '../pages/Beacons'
 
 const Routes = () => {
     return (
@@ -19,6 +20,7 @@ const Routes = () => {
             <Route path='/cart'  exact component={Cart}/>
             <Route path='/confirm' exact component={InfoModal}/>
             <Route path='/host' exact component={Host} />
+            <Route path='/info' exact component={Beacons} />
         </Switch>
     )
 }

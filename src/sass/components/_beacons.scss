@@ -1,0 +1,54 @@
+.beacons{
+  @include flex(center, center);
+  //height: 100vh;
+  //background-color: #ef8393;
+  background-size: cover;
+  background-position: center;
+  &__form{
+    background-color: #f6d0d1;
+    padding: 0px 60px;
+    border-radius: 10px;
+    &__logo{
+      @include flex(center, center);
+      img {
+        height: 110px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+    }
+    &__text{
+      @include flex(center, center);
+      font-size: 1.5rem;
+      font-family: 'Georgia';
+      margin-bottom: 15px;
+    }
+    &__info{
+      @include flex(center, center);
+      box-shadow: $box-shadow;
+      transition: transform 0.5s ease;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: white;
+      border-radius: 20px;
+
+
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+      &__text{
+        font-weight: 500;
+        font-size: 1rem;
+        margin-left: 10px;
+      }
+      &__icon{
+        width: 10%;
+        color: $main-color;
+
+        i {
+            font-size: 2rem;
+        }
+      }
+    }
+  }
+}
