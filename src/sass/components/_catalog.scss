@@ -86,6 +86,8 @@
         @include tablet {
             display: block;
             margin-bottom: 2rem;
+            position: fixed;
+            z-index: 10;
         }
     }
 }
