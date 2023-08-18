@@ -58,4 +58,4 @@ jobs:
             username: ${{ secrets.USERNAME }}
             password: ${{ secrets.PASSWORD }}
             port: ${{ secrets.PORT }}
-            script: ./deployNiCosmetic.sh
+            script: sh /var/www/nicosmetic/deploy.sh
